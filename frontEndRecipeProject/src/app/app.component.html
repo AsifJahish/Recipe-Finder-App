@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Task List</h1>
+  <div class="task-list">
+    <div class="task" *ngFor="let task of tasks">
+      <div class="task-info">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <p>Due: {{ task.dueDate }}</p>
+      </div>
+      <div class="task-actions">
+        <button (click)="markTaskComplete(task)">Complete</button>
+        <button (click)="editTask(task)">Edit</button>
+        <button (click)="deleteTask(task)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
