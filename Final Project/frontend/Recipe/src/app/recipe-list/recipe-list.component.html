@@ -1,0 +1,14 @@
+<!-- <div class="recipe-list">
+  <div class="recipe-card" *ngFor="let recipe of recipes">
+    <img [src]="recipe.image" alt="{{ recipe.title }}">
+    <h3>{{ recipe.title }}</h3>
+  </div>
+</div> -->
+
+
+<div class="recipe-list">
+  <div class="recipe-card" *ngFor="let recipe of recipes" (click)="navigateToRecipeDetail(recipe.id)">
+    <img [src]="recipe.image" alt="{{ recipe.title }}">
+    <h3>{{ recipe.title }}</h3>
+  </div>
+</div>
