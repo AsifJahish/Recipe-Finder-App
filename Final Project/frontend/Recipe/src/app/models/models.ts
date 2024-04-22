@@ -93,3 +93,20 @@ export interface Recipe {
     };
   }
   
+  export interface User {
+    id?: number; // Optional ID field, as it might not exist until the user is saved to the database
+    email: string;
+    first_name: string;
+    user_name: string;
+    password: string;
+}
+
+export interface ShareRecipe {
+  title: string;
+  ingredients: string[];
+  instructions: string;
+  cooking_time: number;
+  difficulty: string;
+  image: string | null; // Change type to string or null to store image URL
+}
+

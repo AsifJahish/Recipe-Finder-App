@@ -13,6 +13,10 @@ import { FilterComponent } from './filter/filter.component';
 import { MyrecipesComponent } from './myrecipes/myrecipes.component';
 import { RecipesDetailsComponent } from './recipes-details/recipes-details.component';
 
+import { ReactiveFormsModule } from '@angular/forms'; 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +33,8 @@ import { RecipesDetailsComponent } from './recipes-details/recipes-details.compo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    ReactiveFormsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
