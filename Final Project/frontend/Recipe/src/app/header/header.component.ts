@@ -24,4 +24,8 @@ export class HeaderComponent{
     this.router.navigate(['share'])
 
   }}
+  navigateTopeopleRecipe(){{
+    this.router.navigate(['peopleRecipe'])
+
+  }}
 }

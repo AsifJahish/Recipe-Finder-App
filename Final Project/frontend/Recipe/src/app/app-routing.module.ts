@@ -4,6 +4,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { MyrecipesComponent } from './myrecipes/myrecipes.component';
 import { RecipesDetailsComponent } from './recipes-details/recipes-details.component';
+import { PeopleRecipesComponent } from './people-recipes/people-recipes.component';
 
 
 
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'signup', component:SignUpComponent },
   { path: 'signin', component:SignInComponent},
   { path: 'share', component:MyrecipesComponent},
+  { path: 'peopleRecipe', component:PeopleRecipesComponent},
   { path: 'recipe/:id', component:RecipesDetailsComponent } 
   // Add other routes as needed
 ];

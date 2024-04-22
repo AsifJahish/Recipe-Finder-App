@@ -60,10 +60,10 @@ export class RecipeService {
 
 
 
+
   getRecipesShared(): Observable<ShareRecipe[]> {
     return this.http.get<ShareRecipe[]>(this.apiShareUrl);
   }
-
 
 
 

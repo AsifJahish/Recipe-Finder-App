@@ -13,7 +13,8 @@ import { FilterComponent } from './filter/filter.component';
 import { MyrecipesComponent } from './myrecipes/myrecipes.component';
 import { RecipesDetailsComponent } from './recipes-details/recipes-details.component';
 
-import { ReactiveFormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { PeopleRecipesComponent } from './people-recipes/people-recipes.component'; 
 
 
 
@@ -27,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FilterComponent,
     MyrecipesComponent,
     RecipesDetailsComponent,
+    PeopleRecipesComponent,
   
   ],
   imports: [
