@@ -14,7 +14,8 @@ import { MyrecipesComponent } from './myrecipes/myrecipes.component';
 import { RecipesDetailsComponent } from './recipes-details/recipes-details.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { PeopleRecipesComponent } from './people-recipes/people-recipes.component'; 
+import { PeopleRecipesComponent } from './people-recipes/people-recipes.component';
+import { FavoriteListComponent } from './favorite-list/favorite-list.component'; 
 
 
 
@@ -29,6 +30,7 @@ import { PeopleRecipesComponent } from './people-recipes/people-recipes.componen
     MyrecipesComponent,
     RecipesDetailsComponent,
     PeopleRecipesComponent,
+    FavoriteListComponent,
   
   ],
   imports: [

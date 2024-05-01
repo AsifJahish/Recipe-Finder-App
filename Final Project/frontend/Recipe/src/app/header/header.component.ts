@@ -28,4 +28,9 @@ export class HeaderComponent{
     this.router.navigate(['peopleRecipe'])
 
   }}
+
+  navigateFavorilist(){{
+    this.router.navigate(['favorite'])
+
+  }}
 }

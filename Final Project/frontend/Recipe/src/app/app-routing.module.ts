@@ -5,6 +5,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { MyrecipesComponent } from './myrecipes/myrecipes.component';
 import { RecipesDetailsComponent } from './recipes-details/recipes-details.component';
 import { PeopleRecipesComponent } from './people-recipes/people-recipes.component';
+import { FavoriteListComponent } from './favorite-list/favorite-list.component';
 
 
 
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path: 'signin', component:SignInComponent},
   { path: 'share', component:MyrecipesComponent},
   { path: 'peopleRecipe', component:PeopleRecipesComponent},
-  { path: 'recipe/:id', component:RecipesDetailsComponent } 
+  { path: 'recipe/:id', component:RecipesDetailsComponent },
+  { path: 'favorite', component:FavoriteListComponent }
+  
   // Add other routes as needed
 ];
 

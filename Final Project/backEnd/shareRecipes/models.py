@@ -1,10 +1,4 @@
 from django.db import models
-from users.models import User
-from django.conf import settings  
-
-from django.db import models
-from users.models import User
-from django.conf import settings  
 
 class Recipe(models.Model):
     title = models.CharField(max_length=100)
@@ -17,7 +11,7 @@ class Recipe(models.Model):
         ('hard', 'Hard'),
     ]
     difficulty = models.CharField(max_length=10, choices=DIFFICULTY_CHOICES)
-    image_url = models.CharField(max_length=255, null=True, blank=True)  # Change to CharField for storing image URL
+    image_url = models.CharField(max_length=255, null=True, blank=True)  # CharField for storing image URL
 
     def __str__(self):
         return self.title

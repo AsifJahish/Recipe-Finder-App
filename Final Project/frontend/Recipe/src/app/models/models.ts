@@ -4,6 +4,7 @@ export interface Recipe {
     image: string;
   }
   
+  
 
   export interface RecipeDetail extends Recipe  {
     vegetarian: boolean;
@@ -107,6 +108,6 @@ export interface ShareRecipe {
   instructions: string;
   cooking_time: number;
   difficulty: string;
-  image: string | null; // Change type to string or null to store image URL
+  image: string; // Change type to string or null to store image URL
 }
 

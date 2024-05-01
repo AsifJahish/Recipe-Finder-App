@@ -24,7 +24,7 @@ const httpOptions = {
 export class RecipeService {
 
   private apiUrl = 'https://api.spoonacular.com/recipes/complexSearch';
-  private apiKey = '8955a20a360040a7b96f10b11a8710a9';
+  private apiKey = '27eddddb896d45f8adc0d0605c59a2ed';
 
   constructor(private http: HttpClient) { }
 
@@ -67,39 +67,25 @@ export class RecipeService {
 
 
 
-
   createRecipe(recipe: ShareRecipe): Observable<ShareRecipe> {
     return this.http.post<ShareRecipe>(this.apiShareUrl, recipe, httpOptions);
   }
-  // Method to fetch users from the backend
-  // getUsers(): Observable<User[]> {
-  //   const usersUrl = 'http://127.0.0.1:8000/admin/users/user/';
-  //   return this.http.get<User[]>(usersUrl);
-  // }
+  
+  private FaUrl= 'http://127.0.0.1:8000/recipes/recipes/add/'
 
-  // // Method to add or update a shareRecipe on the backend
-  // addOrUpdateShareRecipe(shareRecipe: ShareRecipe): Observable<any> {
-  //   const shareRecipeUrl = 'http://127.0.0.1:8000/admin/shareRecipes/recipe/add/';
-  //   return this.http.post<any>(shareRecipeUrl, shareRecipe);
-  // }
+  addRecipeToFavorites(recipe: Recipe): Observable<any> {
+    const { id, title, image } = recipe; // Destructure only the required fields
+    const data = { id, title, image }; // Create an object with the required fields
+    return this.http.post<any>(this.FaUrl, data, httpOptions); // Send only the required data
+  }
 
-  // Method to sign up a user
-  // signUpUser(userData: any): Observable<any> {
-  //   const signUpUrl = 'http://127.0.0.1:8000/signup'; // Adjust URL according to your backend route
-  //   return this.http.post<any>(signUpUrl, userData);
-  // }
 
-  // // Method to update user data
-  // updateUser(userId: number, userData: any): Observable<any> {
-  //   const updateUserUrl = `http://127.0.0.1:8000/admin/users/user/${userId}/update/`; // Adjust URL according to your backend route
-  //   return this.http.put<any>(updateUserUrl, userData);
-  // }
+  private FListUrl = 'http://127.0.0.1:8000/recipes/recipes/'; 
 
-  // // Method to update recipe data
-  // updateRecipe(recipeId: number, recipeData: any): Observable<any> {
-  //   const updateRecipeUrl = `http://127.0.0.1:8000/admin/shareRecipes/recipe/${recipeId}/update/`; // Adjust URL according to your backend route
-  //   return this.http.put<any>(updateRecipeUrl, recipeData);
-  // }
 
+  getRecipesfa(): Observable<Recipe[]> {
+    return this.http.get<Recipe[]>(this.FListUrl);
+  }
 
 }
+  
